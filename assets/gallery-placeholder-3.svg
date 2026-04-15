@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder gallery image</title>
+  <desc id="desc">Abstract placeholder for a cars or motorcycles image.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1829"/>
+      <stop offset="100%" stop-color="#1d2742"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#bg3)"/>
+  <path d="M120 560L220 470H470L580 540H670" fill="none" stroke="#ffb97c" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="250" cy="610" r="66" fill="none" stroke="#a0cfff" stroke-width="18"/>
+  <circle cx="560" cy="610" r="66" fill="none" stroke="#a0cfff" stroke-width="18"/>
+  <text x="78" y="140" fill="#dfeeff" font-family="Arial, sans-serif" font-size="44">Replace with cars or bikes photo</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder gallery image</title>
+  <desc id="desc">Abstract placeholder for a travel photo.</desc>
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c2037"/>
+      <stop offset="100%" stop-color="#102e45"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#bg1)"/>
+  <circle cx="600" cy="180" r="140" fill="#2b5c7b" opacity="0.35"/>
+  <circle cx="180" cy="700" r="160" fill="#62d9cf" opacity="0.18"/>
+  <path d="M110 660C210 480 290 470 360 560C420 640 520 650 690 420" fill="none" stroke="#82d5ca" stroke-width="18" stroke-linecap="round" opacity="0.8"/>
+  <text x="70" y="110" fill="#dfeeff" font-family="Arial, sans-serif" font-size="44">Replace with travel photo</text>
+</svg>

@@ -3,214 +3,403 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sagar Ghevde | Personal Website</title>
+  <title>Sagar Ghevde | IT Support Engineer Portfolio</title>
   <meta
     name="description"
-    content="Animated one-page personal website for Sagar Ghevde highlighting profile, work, skills, and contact information."
+    content="Modern personal portfolio of Sagar Ghevde, an IT Support Engineer with 15+ years of experience across endpoint management, Microsoft 365, systems administration, and user-focused IT operations."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="site-shell">
-    <div class="ambient ambient-one"></div>
-    <div class="ambient ambient-two"></div>
+  <div class="page-shell">
+    <div class="bg-orb orb-one" aria-hidden="true"></div>
+    <div class="bg-orb orb-two" aria-hidden="true"></div>
+    <div class="grid-glow" aria-hidden="true"></div>
 
-    <header class="topbar">
-      <a class="brand" href="#home">SG</a>
-      <nav class="nav">
+    <header class="site-header" id="top">
+      <div class="brand-lockup">
+        <a class="brand-mark" href="#top">SG</a>
+        <div>
+          <p class="brand-name">Sagar Ghevde</p>
+          <p class="brand-role">IT Support Engineer</p>
+        </div>
+      </div>
+      <nav class="site-nav">
         <a href="#about">About</a>
+        <a href="#services">What I Do</a>
         <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#personal">Personal</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero" id="home">
+      <section class="hero section" id="hero">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Personal website</p>
-          <h1>Sagar Ghevde</h1>
-          <p class="hero-role">IT Support Specialist | Endpoint Management | Systems Administration</p>
+          <div class="hero-badges">
+            <span class="eyebrow">Modern tech portfolio</span>
+            <span class="focus-pill">Currently focused on Microsoft 365, endpoint reliability, and user-first support</span>
+          </div>
+          <h1>IT Support Engineer Turning Complex Problems Into Practical Solutions</h1>
           <p class="hero-summary">
-            Results-driven IT professional with 15+ years of experience supporting users, managing systems,
-            and resolving technical issues across MSP and enterprise environments.
+            I&apos;m Sagar Ghevde, a Technical Support Specialist with 15+ years of hands-on experience across MSP and
+            enterprise environments. I help teams stay productive through dependable support, smarter systems, and
+            practical improvements across Microsoft 365, endpoint management, and core IT operations.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contact">Let&apos;s Connect</a>
-            <a class="button button-secondary" href="#experience">View Experience</a>
+          <div class="cta-row">
+            <a class="button button-primary" href="#projects">View Projects</a>
+            <a class="button button-secondary" href="#contact">Contact Me</a>
+            <a class="button button-ghost" href="assets/sagar-ghevde-resume.pdf" download>Download Resume</a>
+          </div>
+          <div class="counter-grid">
+            <article class="counter-card reveal delay-1">
+              <strong class="counter-value" data-target="15">0</strong>
+              <span>Years Experience</span>
+            </article>
+            <article class="counter-card reveal delay-2">
+              <strong class="counter-value" data-target="98">0</strong>
+              <span>Customer Satisfaction</span>
+            </article>
+            <article class="counter-card reveal delay-3">
+              <strong class="counter-text">MSP + Enterprise</strong>
+              <span>Support Background</span>
+            </article>
+            <article class="counter-card reveal delay-4">
+              <strong class="counter-text">M365 / Endpoint / Infrastructure</strong>
+              <span>Core Focus</span>
+            </article>
           </div>
         </div>
 
-        <div class="hero-panel reveal delay-1">
-          <div class="panel-card">
-            <p class="panel-label">Current snapshot</p>
-            <div class="stat">
-              <span class="stat-title">Who I am</span>
-              <strong>IT Support Specialist with enterprise and MSP experience</strong>
+        <div class="hero-visual reveal delay-2">
+          <div class="photo-frame">
+            <div class="photo-halo" aria-hidden="true"></div>
+            <!-- Replace assets/profile-photo.png if you want to swap the main hero image later -->
+            <img class="profile-photo" src="assets/profile-photo.png" alt="Portrait of Sagar Ghevde wearing a suit and sunglasses">
+            <div class="floating-card card card-spotlight">
+              <p class="mini-label">How I work</p>
+              <ul class="mini-list">
+                <li>Practical problem solving</li>
+                <li>Reliable support</li>
+                <li>User-first thinking</li>
+              </ul>
             </div>
-            <div class="stat">
-              <span class="stat-title">Where I work</span>
-              <strong>The Human IT Company | Vancouver, BC</strong>
-            </div>
-            <div class="stat">
-              <span class="stat-title">Core strengths</span>
-              <strong>Endpoint management, Microsoft 365, security, automation</strong>
+          </div>
+          <div class="tool-marquee">
+            <div class="marquee-track">
+              <span>Microsoft 365</span>
+              <span>Intune</span>
+              <span>JAMF</span>
+              <span>PowerShell</span>
+              <span>ServiceNow</span>
+              <span>Entra ID</span>
+              <span>SharePoint</span>
+              <span>OneDrive</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section reveal" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">About me</p>
-          <h2>Built around your resume, but told like a story.</h2>
+      <section class="section about-section" id="about">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">About me</p>
+            <h2>Credible on the technical side, grounded on the human side.</h2>
+          </div>
+          <p class="section-intro">
+            I enjoy the part of IT that directly helps people. Good support is not only about fixing issues. It is
+            about making technology simpler, more stable, and easier for people to rely on.
+          </p>
         </div>
-        <div class="content-grid">
-          <article class="card story-card">
+        <div class="about-layout">
+          <article class="card story-card reveal">
             <p>
-              I&apos;m Sagar Ghevde, an IT professional focused on delivering secure, reliable, and people-first
-              technology support. My background spans MSP environments, enterprise support operations, endpoint
-              management, and systems administration.
+              Across more than 15 years in IT, I&apos;ve supported end users, managed devices, resolved escalations,
+              and improved daily reliability across a broad mix of tools and environments. My experience spans both
+              MSP and enterprise settings, which means I&apos;m comfortable moving between fast-moving client work,
+              structured internal support, and systems that need both stability and care.
             </p>
             <p>
-              I work across Microsoft 365, Intune, JAMF, Entra ID, ServiceNow, Sophos, Syncron, and core
-              networking and backup tools to keep users productive and infrastructure well managed. I&apos;m known for
-              a proactive, solutions-oriented approach and consistently high customer satisfaction.
+              Outside work, I&apos;m passionate about technology, cars, motorcycles, photography, and travel. Those
+              interests say a lot about how I approach my work too: curious, practical, observant, and always looking
+              for better ways to make things work.
             </p>
+            <blockquote class="feature-quote">“I enjoy making technology work better for people.”</blockquote>
           </article>
-          <aside class="card profile-points">
-            <div>
-              <span>Location</span>
-              <strong>Vancouver, British Columbia, Canada</strong>
+          <aside class="about-side reveal delay-1">
+            <div class="card profile-note">
+              <p class="mini-label">Profile at a glance</p>
+              <div class="info-stack">
+                <div>
+                  <span>Role</span>
+                  <strong>IT Support Engineer / Technical Support Specialist</strong>
+                </div>
+                <div>
+                  <span>Based in</span>
+                  <strong>Vancouver, British Columbia</strong>
+                </div>
+                <div>
+                  <span>Strengths</span>
+                  <strong>Troubleshooting, endpoint management, Microsoft 365, user support</strong>
+                </div>
+              </div>
             </div>
-            <div>
-              <span>Current role</span>
-              <strong>IT Support Specialist</strong>
-            </div>
-            <div>
-              <span>Focus areas</span>
-              <strong>Endpoint management, security, support operations, automation</strong>
+            <div class="card photo-note">
+              <!-- Replace this image later with a second personal photo if you want -->
+              <img src="assets/profile-photo.png" alt="Secondary profile photo placeholder for Sagar Ghevde">
+              <p>Professional when needed, approachable always.</p>
             </div>
           </aside>
         </div>
       </section>
 
-      <section class="section reveal" id="experience">
-        <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2>Where I work and the value I bring.</h2>
+      <section class="section services-section" id="services">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">What I do</p>
+            <h2>Support, systems, and the details that keep work moving.</h2>
+          </div>
+          <p class="section-intro">
+            My focus is practical IT that improves daily operations, keeps devices dependable, and reduces friction for
+            real users.
+          </p>
+        </div>
+        <div class="service-grid">
+          <article class="card service-card reveal card-spotlight">
+            <div class="service-icon">01</div>
+            <h3>IT Support</h3>
+            <ul class="detail-list">
+              <li>User support across hardware, software, and Microsoft 365 issues</li>
+              <li>Ticket handling, escalations, remote support, and onsite troubleshooting</li>
+              <li>Reliable service delivery with strong customer care and clear communication</li>
+            </ul>
+          </article>
+          <article class="card service-card reveal delay-1 card-spotlight">
+            <div class="service-icon">02</div>
+            <h3>Endpoint Management</h3>
+            <ul class="detail-list">
+              <li>Intune, JAMF, and SCCM-driven deployment and device lifecycle support</li>
+              <li>Policy management, patching, compliance, and endpoint reliability</li>
+              <li>Consistent device setup across Windows and Apple environments</li>
+            </ul>
+          </article>
+          <article class="card service-card reveal delay-2 card-spotlight">
+            <div class="service-icon">03</div>
+            <h3>Systems Administration</h3>
+            <ul class="detail-list">
+              <li>Active Directory, Entra ID, Microsoft 365 admin, and permissions management</li>
+              <li>SharePoint, OneDrive, backup, VPN, firewall, and infrastructure support</li>
+              <li>Practical administration that improves access, security, and stability</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="experience">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Experience highlights</p>
+            <h2>Support scale, technical maturity, and real-world reliability.</h2>
+          </div>
+          <p class="section-intro">
+            These roles show the progression from hands-on technical support to broader systems, endpoint, and
+            enterprise-focused responsibilities.
+          </p>
         </div>
         <div class="timeline">
-          <article class="timeline-item">
+          <article class="timeline-entry reveal">
             <span class="timeline-dot"></span>
-            <div class="card">
-              <p class="timeline-period">Oct 2023 - Present</p>
-              <h3>IT Support Specialist | The Human IT Company</h3>
+            <div class="card timeline-card">
+              <div class="timeline-topline">
+                <p class="mini-label">2023 - Present</p>
+                <span class="timeline-tag">MSP environment</span>
+              </div>
+              <h3>The Human IT Company</h3>
+              <p class="timeline-role">IT Support Specialist | Vancouver, BC</p>
               <p>
-                Deliver Tier 2 support across Windows and macOS, manage Microsoft 365 and Entra ID onboarding,
-                strengthen endpoint security with Sophos and BitLocker, and automate monitoring and patching
-                workflows through Syncron to improve consistency and response time.
+                Supporting diverse clients across day-to-day IT operations, cloud and on-prem needs, Microsoft 365,
+                endpoint tools, user administration, troubleshooting, and the practical issues that shape real MSP work.
               </p>
             </div>
           </article>
-          <article class="timeline-item">
+          <article class="timeline-entry reveal delay-1">
             <span class="timeline-dot"></span>
-            <div class="card">
-              <p class="timeline-period">Oct 2022 - Oct 2023</p>
-              <h3>Computer &amp; Mobile Technician / Store Manager | Dr. Phone Fix</h3>
+            <div class="card timeline-card">
+              <div class="timeline-topline">
+                <p class="mini-label">2018 - 2022</p>
+                <span class="timeline-tag">Enterprise support</span>
+              </div>
+              <h3>Dentsu Aegis Network</h3>
+              <p class="timeline-role">Senior Information Technology Specialist | Mumbai, India</p>
               <p>
-                Diagnosed and repaired mobile and desktop devices, improved workflow quality checks, supported
-                customers directly, and trained junior technicians while maintaining strong service turnaround
-                and customer satisfaction.
+                Delivered high-volume enterprise support, handled escalations, and worked across ServiceNow, Intune,
+                JAMF, Active Directory, Entra ID, Group Policy, and SCCM while collaborating with vendors and internal
+                teams to keep support dependable at scale.
               </p>
             </div>
           </article>
-          <article class="timeline-item">
+          <article class="timeline-entry reveal delay-2">
             <span class="timeline-dot"></span>
-            <div class="card">
-              <p class="timeline-period">Jan 2018 - Jul 2022</p>
-              <h3>Senior Information Technology Specialist | Dentsu Aegis Network</h3>
+            <div class="card timeline-card">
+              <div class="timeline-topline">
+                <p class="mini-label">2007 - 2017</p>
+                <span class="timeline-tag">Client-facing support</span>
+              </div>
+              <h3>Prodcon Tech. Services</h3>
+              <p class="timeline-role">IT Support Technician | Mumbai, India</p>
               <p>
-                Supported more than 1,000 end users in a global enterprise environment, managed Active Directory,
-                Entra ID, Group Policy, SCCM, Intune, and JAMF, and collaborated across engineering, compliance,
-                and operations teams to maintain secure, scalable support processes.
-              </p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="card">
-              <p class="timeline-period">Jun 2007 - Dec 2017</p>
-              <h3>IT Support Technician | Prodcon Tech. Services</h3>
-              <p>
-                Delivered onsite enterprise IT support, managed desktop and laptop deployment, handled Active
-                Directory administration, resolved network and printer issues, and maintained support logs and
-                asset records aligned with SLA expectations.
+                Built a strong foundation in technical troubleshooting, client communication, device deployment,
+                network issue resolution, and day-to-day support workflows that keep business operations stable.
               </p>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section reveal" id="skills">
-        <div class="section-heading">
-          <p class="eyebrow">Skills</p>
-          <h2>What I work with.</h2>
-        </div>
-        <div class="skill-grid">
-          <article class="card skill-card">
-            <h3>Endpoint &amp; Identity</h3>
-            <p>Microsoft Intune, JAMF, Active Directory, Entra ID, Azure AD, MFA, role-based access</p>
-          </article>
-          <article class="card skill-card">
-            <h3>IT Operations</h3>
-            <p>ServiceNow, Autotask, Syncron, Splashtop, Tier 2 support, documentation, SLA-driven service</p>
-          </article>
-          <article class="card skill-card">
-            <h3>Security &amp; Backup</h3>
-            <p>Sophos XG Firewall, Sophos Central, Comet, Duplicati, Windows Server Backup, BitLocker</p>
-          </article>
-          <article class="card skill-card">
-            <h3>Infrastructure &amp; Deployment</h3>
-            <p>DNS, DHCP, VPN, VLANs, PowerShell, SCCM, Windows imaging, device builds, printer support</p>
-          </article>
-          <article class="card skill-card">
-            <h3>Cloud &amp; Collaboration</h3>
-            <p>Microsoft 365 Admin Center, Teams, SharePoint, OneDrive, onboarding, offboarding</p>
-          </article>
-          <article class="card skill-card">
-            <h3>Certifications</h3>
-            <p>CCNA, MCSE, MCP, with CompTIA A+, Network+, and ITIL 4 Foundation currently in progress</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-accent reveal" id="contact">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>Let&apos;s build something useful.</h2>
-        </div>
-        <div class="contact-card card">
-          <p>
-            I&apos;m open to connecting around IT support, endpoint management, systems administration, and
-            technology operations opportunities.
+      <section class="section projects-section" id="projects">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Projects</p>
+            <h2>Practical IT work that improves reliability, access, and support efficiency.</h2>
+          </div>
+          <p class="section-intro">
+            These are the kinds of initiatives I&apos;ve contributed to across user support, administration, and systems
+            operations.
           </p>
-          <div class="contact-links">
-            <a href="mailto:sagarghevde@gmail.com">sagarghevde@gmail.com</a>
-            <a href="https://www.linkedin.com/in/sagarghevde/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://github.com/sagarghevde" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <div class="project-grid">
+          <article class="card project-card reveal card-spotlight">
+            <h3>Microsoft 365 Migration</h3>
+            <p>Planned and supported Microsoft 365 migrations, user onboarding, account setup, and service continuity for business environments.</p>
+            <p class="project-tools">Tools: Microsoft 365, Exchange Online, SharePoint, OneDrive</p>
+          </article>
+          <article class="card project-card reveal delay-1 card-spotlight">
+            <h3>SharePoint and OneDrive Setup</h3>
+            <p>Configured collaboration spaces, file access, sync workflows, and migration support to make team content easier to manage and share.</p>
+            <p class="project-tools">Tools: SharePoint, OneDrive, Microsoft 365</p>
+          </article>
+          <article class="card project-card reveal delay-2 card-spotlight">
+            <h3>Intune and JAMF Device Management</h3>
+            <p>Managed Windows and Apple endpoints for smoother deployment, policy consistency, patching, and ongoing device reliability.</p>
+            <p class="project-tools">Tools: Intune, JAMF, SCCM</p>
+          </article>
+          <article class="card project-card reveal card-spotlight">
+            <h3>Firewall and VPN Support</h3>
+            <p>Supported secure connectivity, firewall changes, VPN access, and real-world network troubleshooting for business users and remote teams.</p>
+            <p class="project-tools">Tools: Sophos, DNS, DHCP, VPN, firewall rules</p>
+          </article>
+          <article class="card project-card reveal delay-1 card-spotlight">
+            <h3>Backup and Recovery Systems</h3>
+            <p>Maintained backup integrity, recovery readiness, and operational confidence across business systems that required dependable protection.</p>
+            <p class="project-tools">Tools: Comet, Duplicati, Windows Server Backup</p>
+          </article>
+          <article class="card project-card reveal delay-2 card-spotlight">
+            <h3>PowerShell Automation</h3>
+            <p>Created repeatable scripts for admin tasks, support fixes, and routine actions that reduced manual effort and improved consistency.</p>
+            <p class="project-tools">Tools: PowerShell, Windows, Microsoft 365</p>
+          </article>
+          <article class="card project-card reveal card-spotlight">
+            <h3>Teams Phone and Voice Support</h3>
+            <p>Supported voice and collaboration workflows to keep communication reliable for users working across modern Microsoft environments.</p>
+            <p class="project-tools">Tools: Teams Phone, Microsoft 365, support operations</p>
+          </article>
+          <article class="card project-card reveal delay-1 card-spotlight">
+            <h3>Active Directory and Access Management</h3>
+            <p>Handled identity, permissions, onboarding, offboarding, and access control to keep user management secure and efficient.</p>
+            <p class="project-tools">Tools: Active Directory, Entra ID, Group Policy, MFA</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section personal-section" id="personal">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Personal side</p>
+            <h2>What keeps me curious outside of work.</h2>
+          </div>
+          <p class="section-intro">
+            The best support work is practical and human. These interests are part of what shapes that mindset.
+          </p>
+        </div>
+        <div class="hobby-grid">
+          <article class="card hobby-card reveal">
+            <h3>Technology</h3>
+            <p>I enjoy staying current with tools, systems, and practical innovations that make work smoother.</p>
+          </article>
+          <article class="card hobby-card reveal delay-1">
+            <h3>Cars and Motorcycles</h3>
+            <p>A strong personal interest that reflects my appreciation for design, mechanics, and performance.</p>
+          </article>
+          <article class="card hobby-card reveal delay-2">
+            <h3>Photography</h3>
+            <p>A creative outlet that sharpens how I notice detail, composition, and the story inside a moment.</p>
+          </article>
+          <article class="card hobby-card reveal delay-3">
+            <h3>Travel</h3>
+            <p>I enjoy exploring new places and experiences that broaden perspective and keep life interesting.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Life beyond work</p>
+            <h2>Room for a more personal visual story.</h2>
+          </div>
+          <p class="section-intro">
+            Placeholder gallery for 2 to 4 personal photos later. Replace these with travel, photography, or lifestyle
+            shots when you&apos;re ready.
+          </p>
+        </div>
+        <div class="gallery-grid">
+          <!-- Replace the placeholder images in assets/ with your own gallery photos later -->
+          <figure class="gallery-card reveal">
+            <img src="assets/gallery-placeholder-1.svg" alt="Placeholder gallery image one">
+            <figcaption>Travel moments</figcaption>
+          </figure>
+          <figure class="gallery-card reveal delay-1">
+            <img src="assets/gallery-placeholder-2.svg" alt="Placeholder gallery image two">
+            <figcaption>Photography notes</figcaption>
+          </figure>
+          <figure class="gallery-card reveal delay-2">
+            <img src="assets/gallery-placeholder-3.svg" alt="Placeholder gallery image three">
+            <figcaption>Machines and motion</figcaption>
+          </figure>
+          <figure class="gallery-card reveal delay-3">
+            <img src="assets/gallery-placeholder-4.svg" alt="Placeholder gallery image four">
+            <figcaption>Life outside the desk</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-panel reveal">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Experienced, reliable, user-focused, and approachable.</h2>
+            <p class="contact-copy">
+              If you&apos;re hiring for support, endpoint, or systems-focused roles, or if you want someone who brings
+              strong troubleshooting with a calm, practical style, I&apos;d be glad to connect.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:sagarghevde@gmail.com">Email Me</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/sagarghevde/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <!-- Replace the resume file below once you add your final PDF into assets/ -->
+            <a class="button button-ghost" href="assets/sagar-ghevde-resume.pdf" download>Download Resume</a>
           </div>
         </div>
       </section>
     </main>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>

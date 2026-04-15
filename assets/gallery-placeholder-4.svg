@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder gallery image</title>
+  <desc id="desc">Abstract placeholder for a lifestyle image.</desc>
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a2d"/>
+      <stop offset="100%" stop-color="#14314f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#bg4)"/>
+  <circle cx="420" cy="270" r="130" fill="#9ed7ff" opacity="0.22"/>
+  <path d="M120 660C220 570 330 530 430 560C560 600 630 560 700 500" fill="none" stroke="#75dfd4" stroke-width="18" stroke-linecap="round"/>
+  <path d="M150 740C250 650 350 620 470 650C580 680 640 660 710 620" fill="none" stroke="#ffb97c" stroke-width="14" stroke-linecap="round" opacity="0.75"/>
+  <text x="110" y="120" fill="#dfeeff" font-family="Arial, sans-serif" font-size="44">Replace with personal photo</text>
+</svg>

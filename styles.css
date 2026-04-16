@@ -408,6 +408,7 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.82fr);
   gap: 1.5rem;
+  align-items: start;
 }
 
 .card-spotlight::before {
@@ -430,6 +431,8 @@ h3 {
 
 .story-card {
   padding: 2rem;
+  align-self: start;
+  height: auto;
 }
 
 .feature-quote {
@@ -538,6 +541,7 @@ h3 {
   border-radius: var(--radius-md);
   border: 1px solid rgba(156, 190, 236, 0.1);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 100%), rgba(7, 17, 30, 0.42);
+  box-shadow: var(--shadow);
 }
 
 .additional-header {

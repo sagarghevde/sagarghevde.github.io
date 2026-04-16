@@ -1,92 +1,108 @@
-const revealItems = document.querySelectorAll(".reveal");
-const spotlightCards = document.querySelectorAll(".card-spotlight");
-const header = document.querySelector(".site-header");
-const experienceToggle = document.querySelector(".experience-toggle");
-const additionalPanel = document.querySelector(".additional-panel");
-const toggleLabel = document.querySelector(".toggle-label");
+window.addEventListener("DOMContentLoaded", () => {
+  const revealItems = document.querySelectorAll(".reveal");
+  const spotlightCards = document.querySelectorAll(".card-spotlight");
+  const header = document.querySelector(".site-header");
+  const experienceToggle = document.querySelector(".experience-toggle");
+  const additionalPanel = document.querySelector(".additional-panel");
+  const toggleLabel = document.querySelector(".toggle-label");
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
-
-      entry.target.classList.add("visible");
-
-      if (entry.target.classList.contains("counter-card")) {
-        const value = entry.target.querySelector(".counter-value");
-        if (value) {
-          animateCounter(value);
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
         }
-      }
 
-      revealObserver.unobserve(entry.target);
-    });
-  },
-  {
-    threshold: 0.16,
-  }
-);
+        entry.target.classList.add("visible");
 
-revealItems.forEach((item) => revealObserver.observe(item));
+        if (entry.target.classList.contains("counter-card")) {
+          const value = entry.target.querySelector(".counter-value");
+          if (value) {
+            animateCounter(value);
+          }
+        }
 
-function animateCounter(element) {
-  if (element.dataset.done === "true") {
-    return;
-  }
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.16,
+    }
+  );
 
-  const target = Number(element.dataset.target || 0);
-  const duration = 1400;
-  const startTime = performance.now();
+  revealItems.forEach((item) => revealObserver.observe(item));
 
-  const step = (time) => {
-    const progress = Math.min((time - startTime) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const current = Math.floor(target * eased);
-
-    element.textContent = `${current}+`;
-
-    if (progress < 1) {
-      requestAnimationFrame(step);
+  function animateCounter(element) {
+    if (element.dataset.done === "true") {
       return;
     }
 
-    element.textContent = `${target}+`;
-    element.dataset.done = "true";
+    const target = Number(element.dataset.target || 0);
+    const duration = 1400;
+    const startTime = performance.now();
+
+    const step = (time) => {
+      const progress = Math.min((time - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(target * eased);
+
+      element.textContent = `${current}+`;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+        return;
+      }
+
+      element.textContent = `${target}+`;
+      element.dataset.done = "true";
+    };
+
+    requestAnimationFrame(step);
+  }
+
+  const syncHeaderState = () => {
+    if (!header) {
+      return;
+    }
+
+    if (window.scrollY > 24) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
   };
 
-  requestAnimationFrame(step);
-}
+  syncHeaderState();
+  window.addEventListener("scroll", syncHeaderState, { passive: true });
 
-const syncHeaderState = () => {
-  if (window.scrollY > 24) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-};
+  spotlightCards.forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
 
-syncHeaderState();
-window.addEventListener("scroll", syncHeaderState, { passive: true });
-
-spotlightCards.forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const rect = card.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-
-    card.style.setProperty("--spotlight-x", `${x}px`);
-    card.style.setProperty("--spotlight-y", `${y}px`);
+      card.style.setProperty("--spotlight-x", `${x}px`);
+      card.style.setProperty("--spotlight-y", `${y}px`);
+    });
   });
-});
 
-if (experienceToggle && additionalPanel && toggleLabel) {
-  experienceToggle.addEventListener("click", () => {
-    const isOpen = experienceToggle.getAttribute("aria-expanded") === "true";
+  if (experienceToggle && additionalPanel && toggleLabel) {
+    const openPanel = () => {
+      additionalPanel.hidden = false;
+      additionalPanel.classList.add("is-open");
+      additionalPanel.style.maxHeight = "0px";
 
-    if (isOpen) {
+      requestAnimationFrame(() => {
+        additionalPanel.style.maxHeight = `${additionalPanel.scrollHeight}px`;
+      });
+
+      experienceToggle.setAttribute("aria-expanded", "true");
+      toggleLabel.textContent = "Show Less";
+    };
+
+    const closePanel = () => {
       additionalPanel.style.maxHeight = `${additionalPanel.scrollHeight}px`;
+
       requestAnimationFrame(() => {
         additionalPanel.style.maxHeight = "0px";
         additionalPanel.classList.remove("is-open");
@@ -98,19 +114,17 @@ if (experienceToggle && additionalPanel && toggleLabel) {
       window.setTimeout(() => {
         additionalPanel.hidden = true;
       }, 420);
+    };
 
-      return;
-    }
+    experienceToggle.addEventListener("click", () => {
+      const isOpen = experienceToggle.getAttribute("aria-expanded") === "true";
 
-    additionalPanel.hidden = false;
-    additionalPanel.classList.add("is-open");
-    additionalPanel.style.maxHeight = "0px";
+      if (isOpen) {
+        closePanel();
+        return;
+      }
 
-    requestAnimationFrame(() => {
-      additionalPanel.style.maxHeight = `${additionalPanel.scrollHeight}px`;
+      openPanel();
     });
-
-    experienceToggle.setAttribute("aria-expanded", "true");
-    toggleLabel.textContent = "Show Less";
-  });
-}
+  }
+});
